@@ -20,7 +20,7 @@ def load_data_set():
     posting_list = [['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'],
                     ['maybe', 'not', 'take', 'him', 'to', 'dog', 'park', 'stupid'],
                     ['my', 'dalmation', 'is', 'so', 'cute', 'I', 'love', 'him'],
-                    ['stop', 'posting','stupid', 'worthless', 'garbage'],
+                    ['stop', 'posting', 'stupid', 'worthless', 'garbage'],
                     ['mr', 'licks', 'ate', 'my', 'steak', 'how', 'to', 'stop', 'him'],
                     ['quit', 'buying', 'worthless', 'dog', 'food', 'stupid']]
     class_labels = [0, 1, 0, 1, 0, 1]
@@ -131,13 +131,13 @@ def spam_test():
     class_list = []
     full_text = []
     for i in range(1,26):
-        word_list = text_parse(open('email/spam/%d.txt' %i).read())
+        word_list = text_parse(open('email/spam/%d.txt' % i).read())
 
         # 所有邮件内容构成的列表
         doc_list.append(word_list)
         full_text.extend(word_list)
         class_list.append(1)
-        word_list = text_parse(open('email/ham/%d.txt' %i).read())
+        word_list = text_parse(open('email/ham/%d.txt' % i).read())
         doc_list.append(word_list)
         full_text.append(word_list)
         class_list.append(0)
